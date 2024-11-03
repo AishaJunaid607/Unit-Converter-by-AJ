@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+   
+
+    /* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://static.vecteezy.com/system/resources/thumbnails/049/415/281/small/wooden-ruler-placed-on-a-polished-wooden-floor-in-a-well-lit-interior-during-the-day-photo.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Dark overlay to improve text visibility */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for better contrast */
+}
+
+/* Main container styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card styling for the converter */
+.card {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  backdrop-filter: blur(15px);
+  margin: auto;
+}
+
+/* Header and text styling */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7); /* Added shadow for readability */
+}
+
+p {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Label styling */
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d1d5db;
+  display: block;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+/* Input styling */
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  color:whitesmoke;
+}
+
+input[type="number"]:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* Select and dropdown styling */
+.select-trigger {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  color: #dfe6f7;
+  cursor: pointer;
+  text-align: left;
+}
+
+.select-content {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.select-item:hover {
+  background-color: #f9fafb;
+}
+
+/* Button styling */
+button {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Converted value display styling with bold border effect */
+.result {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border: 3px solid #ffffff;
+  border-radius: 8px;
+}
